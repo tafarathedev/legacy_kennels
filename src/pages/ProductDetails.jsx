@@ -121,7 +121,7 @@ const ProductDetails = () => {
                             <path d="M12.5 20.8333C14.3032 19.4813 16.4962 18.7505 18.75 18.7505C21.0038 18.7505 23.1968 19.4813 25 20.8333C26.8032 22.1853 28.9962 22.9161 31.25 22.9161C33.5038 22.9161 35.6968 22.1853 37.5 20.8333" stroke="#4B5563" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <p className="font-semibold text-xl leading-5 text-gray-800 lg:mt-10 mt-9">Vaccination</p>
-                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Here are all the great cocktail recipes you should know how to make, from the margarita to the whiskey sour. Cheers! </p>
+                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Here are all the great cocktail rec Lorem ipsum dolor sit amet. whiskey sour. Cheers! </p>
                     </div>
                     <div>
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +135,7 @@ const ProductDetails = () => {
                             <path d="M31.25 7.29163C33.8953 8.22305 36.2979 9.736 38.2809 11.719C40.264 13.7021 41.7769 16.1047 42.7083 18.75H33.3333C32.6946 18.0019 31.998 17.3054 31.25 16.6666V7.29163Z" stroke="#4B5563" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <p className="font-semibold text-xl leading-5 text-gray-800 lg:mt-10 mt-9">Healthy Breed</p>
-                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Product durability is a key aspect of achieving a circular economy. ... Moreover, enhancing the durability of individual hardware components </p>
+                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Lorem ipsum dolor sit amet.y. ... Moreover, enhancing the durability of individual hardware components </p>
                     </div>
                     <div>
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,8 +156,8 @@ const ProductDetails = () => {
                             <path d="M16.667 16.6666L9.79199 9.79163" stroke="#4B5563" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M16.667 33.3334L9.79199 40.2084" stroke="#4B5563" strokeWidth="3.25" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                        <p className="font-semibold text-xl leading-5 text-gray-800 lg:mt-10 mt-9">Minimal Design</p>
-                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Minimalist interior design is very similar to modern interior design and involves using the bare essentials </p>
+                        <p className="font-semibold text-xl leading-5 text-gray-800 lg:mt-10 mt-9">Obidience Level</p>
+                        <p className="text-normal text-base leading-6 text-gray-600 mt-4">Lorem ipsum dolor sit amet. the bare essentials </p>
                     </div>
                 </div>
             </div>

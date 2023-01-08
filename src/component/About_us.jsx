@@ -25,7 +25,7 @@ const About_us = () => {
       </div>
 
       <div className="md:pt-8">
-        <p className="text-indigo-500 font-bold text-center md:text-left">Who we are</p>
+        <p className="text-yellow-600 font-bold text-center md:text-left">Who we are</p>
 
         <h1 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Our competitive advantage</h1>
 
@@ -42,11 +42,6 @@ const About_us = () => {
     </div>
   </div>
 </div>
-       
-  
-       
-          
-  
         
     </div>
   </section>

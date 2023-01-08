@@ -219,7 +219,7 @@ const Navigation =()=> {
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-sm dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
+                                <Link to="/dogs" className="text-sm dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Dog breed
                                 </Link>
                             </li>
@@ -302,7 +302,7 @@ const Navigation =()=> {
                     <div className="mt-6 mx-4 bg-white">
                         <ul className="flex flex-col space-y-8  ">
                             <li className="flex items-center justify-between ">
-                                <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                                <Link to="/" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Home
                                 </Link>
                                 <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
@@ -322,8 +322,8 @@ const Navigation =()=> {
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Pages
+                            <Link to="/dogs" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                                    Dog Store
                                 </Link>
                                 <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -332,8 +332,8 @@ const Navigation =()=> {
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Blogs
+                            <Link to="/services" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                                    Services
                                 </Link>
                                 <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +342,7 @@ const Navigation =()=> {
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                            <Link to="/contacts" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Contact Us
                                 </Link>
                                 <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">

@@ -34,8 +34,8 @@ const SingleProduct = () => {
     />
 
     <img
-      src="https://images.unsplash.com/photo-1599481238505-b8b0537a3f77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2664&q=80"
-      alt=""
+     src="https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+     alt=""
       className="absolute inset-0 object-cover w-full h-full opacity-0 group-hover:opacity-100"
     />
   </div>
@@ -49,7 +49,7 @@ const SingleProduct = () => {
 
     <h3 className="mt-4 text-lg font-medium text-gray-900">Adult Dog Collar</h3>
 
-    <p className="mt-1.5 text-sm text-gray-700">$14.99</p>
+    <p className="mt-1.5 text-sm text-gray-700">K5000</p>
 
     <form className="mt-4">
       <button

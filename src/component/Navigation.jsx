@@ -135,7 +135,7 @@ const Navigation =()=> {
                                         </Link>
                                         <button className="fill-stroke text-black dark:text-white" aria-label="show options">
                                             <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
+                                                <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.7s5" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
                                         </button>
                                     </li>
@@ -219,28 +219,28 @@ const Navigation =()=> {
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Capes
+                                <Link to="javascript:void(0)" className="text-sm dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
+                                    Dog breed
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
                                 <Link to="javascript:void(0)" className="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Coats
+                                    Mongrel
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
                                 <Link to="javascript:void(0)" className="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Denim 2021
+                                   somedog
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
                                 <Link to="javascript:void(0)" className="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Leather shoe collection 2021
+                                    somegdog
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
                                 <Link to="javascript:void(0)" className="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Active wear
+                                    rotweiller
                                 </Link>
                             </li>
                             <li className="flex items-center justify-between">
@@ -291,7 +291,7 @@ const Navigation =()=> {
                             <div>
                                 <p className="text-base font-semibold text-gray-800">Menu</p>
                             </div>
-                            <button aria-label="close menu" onClick={() => setShowMenuSm(false)} className="text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                            <button aria-label="close menu" onClick={() => setShowMenuSm(false)} className="text-white  dark:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800">
                                 <svg className="fill-stroke" width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15 5L5 15" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                                     <path d="M5 5L15 15" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
@@ -299,53 +299,53 @@ const Navigation =()=> {
                             </button>
                         </div>
                     </div>
-                    <div className="mt-6 mx-4 dark:bg-gray-900">
-                        <ul className="flex flex-col space-y-8 dark:bg-gray-900 ">
+                    <div className="mt-6 mx-4 bg-white">
+                        <ul className="flex flex-col space-y-8  ">
                             <li className="flex items-center justify-between ">
-                                <Link to="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
+                                <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Home
                                 </Link>
-                                <button className="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                                <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
+                                <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Catalog
                                 </Link>
-                                <button className="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                                <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
+                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
                                     Pages
                                 </Link>
-                                <button className="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                                <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Blog
+                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                                    Blogs
                                 </Link>
-                                <button className="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                                <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </button>
                             </li>
                             <li className="flex items-center justify-between">
-                                <Link to="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
-                                    Contact us
+                            <Link to="javascript:void(0)" className="text-base dark:text-gray-900  text-white focus:outline-none  focus:ring-2 focus:ring-gray-800 hover:underline">
+                                    Contact Us
                                 </Link>
-                                <button className="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                                <button className="focus:outline-none focus:ring-2 text-white dark:text-gray-900 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                                     <svg className="fill-stroke" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 6L8 10L4 6" stroke="currentColor" strokeWidth="0.75" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -354,9 +354,9 @@ const Navigation =()=> {
                         </ul>
                     </div>
                     <div className="w-full h-full flex items-end">
-                        <ul className="bg-gray-50 dark:bg-gray-800 py-10 px-4 flex flex-col space-y-8 w-full">
+                        <ul className="bg-gray-50 dark:bg-white py-10 px-4 flex flex-col space-y-8 w-full">
                             <li>
-                                <Link className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" to="javascript:void(0)">
+                                <Link className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-white hover:underline" to="javascript:void(0)">
                                     <div>
                                         <svg width={22} height={22} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4.33333 1L1 5V19C1 19.5304 1.23413 20.0391 1.65087 20.4142C2.06762 20.7893 2.63285 21 3.22222 21H18.7778C19.3671 21 19.9324 20.7893 20.3491 20.4142C20.7659 20.0391 21 19.5304 21 19V5L17.6667 1H4.33333Z" stroke="#1F2937" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />

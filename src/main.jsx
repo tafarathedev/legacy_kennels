@@ -9,20 +9,24 @@ import About_us from './component/Services'
 import Services from './component/Services'
 import Terms_Conditions from './pages/Terms&Conditions'
 import NotFound from './pages/404NotFound'
-import SingleDog from './component/SingleDog'
 import Cart from './pages/Cart'
+import Blogs from './pages/Blogs'
+import Dogs from './pages/Dogs'
+import DogDetails from './pages/DogDetails'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App/>} />
-        <Route path="/product_details" element={<ProductDetails/>} />
+        <Route path="/products/product_details" element={<ProductDetails/>} />
         <Route path="/products" element={<Products/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/terms_and_conditions" element={<Terms_Conditions/>} />
         <Route path="/services" element={<Services/>} />
-        <Route path="/dog" element={<SingleDog/>} />
+        <Route path="/dogs" element={<Dogs/>} />
+        <Route path="/dogs/dog_details" element={<DogDetails/>} />
+        <Route path="/blogs"  element={<Blogs/>}/>
         <Route path="/*"element={<NotFound />} />
       </Routes>
     </Router>

@@ -1,5 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Footer from '../component/Footer'
+import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
 
 const Cart = () => {
@@ -10,21 +12,21 @@ const Cart = () => {
         <br />
   <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
     <div className="mb-6 sm:mb-10 lg:mb-16">
-      <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Your Cart</h2>
+      <Heading title="Cart" para="all cart items are saved here ready to be checked out" />
     </div>
 
     <div className="flex flex-col gap-4 md:gap-6 mb-6 sm:mb-8">
    {/*    <!-- product - start --> */}
       <div className="flex flex-wrap border rounded-lg overflow-hidden gap-x-4 sm:gap-y-4 lg:gap-6">
-        <a href="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
+        <Link to="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
           <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80" loading="lazy" alt="Photo by Thái An" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
-        </a>
+        </Link>
 
         <div className="flex flex-col justify-between flex-1 py-4">
           <div>
-            <a href="/product_details" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog Paws</a>
+            <Link to="/product_details" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog Paws</Link>
 
-            <span className="block text-gray-500">Size: S</span>
+            <span className="block text-gray-500">Age: S</span>
             <span className="block text-gray-500">Color: White</span>
           </div>
 
@@ -64,13 +66,13 @@ const Cart = () => {
 
       <!-- product - start --> */}
       <div className="flex flex-wrap border rounded-lg overflow-hidden gap-x-4 sm:gap-y-4 lg:gap-6">
-        <a href="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
+        <Link to="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
         <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80" loading="lazy" alt="Photo by Thái An" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
-        </a>
+        </Link>
 
         <div className="flex flex-col justify-between flex-1 py-4">
           <div>
-            <a href="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog collar</a>
+            <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog collar</Link>
 
             <span className="block text-gray-500">Size: M</span>
             <span className="block text-gray-500">Color: Black</span>
@@ -112,13 +114,13 @@ const Cart = () => {
 
       <!-- product - start --> */}
       <div className="flex flex-wrap border rounded-lg overflow-hidden gap-x-4 sm:gap-y-4 lg:gap-6">
-        <a href="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
+        <Link to="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
         <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=662&q=80" loading="lazy" alt="Photo by Thái An" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
-        </a>
+        </Link>
 
         <div className="flex flex-col justify-between flex-1 py-4">
           <div>
-            <a href="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog suit</a>
+            <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">Dog suit</Link>
 
             <span className="block text-gray-500">Size: S</span>
             <span className="block text-gray-500">Color: Black</span>

@@ -64,7 +64,7 @@ const ProductDetails = () => {
                     </div>
 
                     <p className=" font-normal text-base leading-6 text-gray-600 mt-7">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using. Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                    <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ 790.89</p>
+                    <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">K 790.89</p>
 
                     <div className="lg:mt-11 mt-10">
                         <div className="flex flex-row justify-between">

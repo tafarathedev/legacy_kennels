@@ -1,11 +1,11 @@
 import React from 'react'
+import Heading from './Heading'
 
 const SampleTestimonials = () => {
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
+       <Heading title="What Others Say About Us"  para="A few of our clients had a few words to say to us, this is what they said ab out our dogs "/>
     <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
-      <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12">What others say about us</h2>
-  
       <div className="grid md:grid-cols-2 gap-4 md:gap-8">
        {/*  <!-- quote - start --> */}
         <div className="flex flex-col items-center bg-gray-900 rounded-lg gap-4 md:gap-6 px-8 py-6">

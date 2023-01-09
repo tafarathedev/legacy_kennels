@@ -1,4 +1,5 @@
 import React from 'react'
+import Heading from './Heading'
 
 
 const About_us = () => {
@@ -8,7 +9,7 @@ const About_us = () => {
       <section classNameName="bg-gray-900 dark:bg-white text-white dark:text-gray-900">
     <div classNameName="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
       <div classNameName="mx-auto max-w-lg text-center">
-      <h2 className="text-3xl font-bold sm:text-4xl text-white dark:text-gray-900  text-center py-6">About Us</h2>
+    <Heading title="About Us" para="we are many things related to a dog business site"/>
   
         <p classNameName="mt-4  text-white dark:text-gray-900">
         

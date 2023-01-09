@@ -2,67 +2,27 @@ import React from 'react'
 
 const SingleProduct = () => {
   return (
-    <>
-      <li>
-      <a href="/product_details" className="relative block overflow-hidden group">
-  <button
-    className="absolute right-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-  >
-    <span className="sr-only">Wishlist</span>
+   
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      className="w-4 h-4"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-      />
-    </svg>
-  </button>
-
-  <div className="relative h-64 sm:h-72">
-    <img
-      src="https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-      alt=""
-      className="absolute inset-0 object-cover w-full h-full opacity-100 group-hover:opacity-0"
-    />
-
-    <img
-     src="https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-     alt=""
-      className="absolute inset-0 object-cover w-full h-full opacity-0 group-hover:opacity-100"
-    />
-  </div>
-
-  <div className="p-6 border rounded bg-white darK;bg-gray-">
-    <span
-      className="whitespace-nowrap bg-yellow-600 px-3 py-1.5 text-xs font-medium"
-    >
-      New
-    </span>
-
-    <h3 className="mt-4 text-lg font-medium text-gray-900">Adult Dog Collar</h3>
-
-    <p className="mt-1.5 text-sm text-gray-700">K5000</p>
-
-    <form className="mt-4">
-      <button
-        className="block w-full p-4 text-sm font-medium transition bg-yellow-600 rounded hover:scale-105"
-      >
-        Add to Cart
-      </button>
-    </form>
-  </div>
-</a>
-
-      </li>
-    </>
+    <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="/products/product_details">
+          <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+          <div class="px-4 py-3 w-72">
+            <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+            <p class="text-lg font-bold text-black truncate block capitalize">Product Name</p>
+            <div class="flex items-center">
+              <p class="text-lg font-semibold text-black cursor-auto my-3">K149</p>
+              <del>
+                <p class="text-sm text-gray-600 cursor-auto ml-2">K199</p>
+              </del>
+              <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />
+                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                </svg></div>
+            </div>
+          </div>
+        </a>
+      </div>
   )
 }
 

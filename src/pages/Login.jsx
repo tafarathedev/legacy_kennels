@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 const Login = () => {
   return (
 
@@ -16,7 +16,7 @@ const Login = () => {
         />
   
         <div className="hidden lg:relative lg:block lg:p-12">
-          <a className="block text-white" href="/">
+          <Link className="block text-white" to="/">
             <span className="sr-only">Home</span>
             <svg
               className="h-8 sm:h-10"
@@ -29,7 +29,7 @@ const Login = () => {
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </Link>
   
           <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
             Welcome to Squid 🦑
@@ -48,9 +48,9 @@ const Login = () => {
       >
         <div className="max-w-xl lg:max-w-3xl">
           <div className="relative -mt-16 block lg:hidden">
-            <a
+            <Link
               className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 dark:bg-gray-900 sm:h-20 sm:w-20"
-              href="/"
+              to="/"
             >
               <span className="sr-only">Home</span>
               <svg
@@ -64,7 +64,7 @@ const Login = () => {
                   fill="currentColor"
                 />
               </svg>
-            </a>
+            </Link>
   
             <h1
               className="mt-2 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl md:text-4xl"
@@ -178,13 +178,12 @@ const Login = () => {
             <div className="col-span-6">
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 By creating an account, you agree to our
-                <a href="#" className="text-gray-700 underline dark:text-gray-200">
+                <Link to="#" className="text-gray-700 underline dark:text-gray-200">
                   terms and conditions
-                </a>
+                </Link>
                 and
-                <a href="#" className="text-gray-700 underline dark:text-gray-200">
-                  privacy policy </a
-                >.
+                <Link to="#" className="text-gray-700 underline dark:text-gray-200">
+                  privacy policy </Link>.
               </p>
             </div>
   
@@ -197,7 +196,7 @@ const Login = () => {
   
               <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
                 Already have an account?
-                <a href="#" className="text-gray-700 underline dark:text-gray-200">Log in</a>.
+                <Link to="#" className="text-gray-700 underline dark:text-gray-200">Log in</Link>.
               </p>
             </div>
           </form>

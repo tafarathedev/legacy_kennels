@@ -20,6 +20,8 @@ const para ="This is a section of some simple filler text, also known as placeho
   <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
     {/* blogs component */}
     <SingleBlog />
+    <SingleBlog />
+    <SingleBlog />
  
   </div>
 </div>

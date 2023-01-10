@@ -31,7 +31,7 @@ const NewsLetter = () => {
                     </form>
                     <p className="mt-3 mx-auto text-center max-w-lg text-[15px] text-gray-400">
                         No spam ever, we are care about the protection of your data. 
-                        Read our <a className="text-indigo-600 underline" href="javascript:void(0)"> Privacy Policy </a>
+                        Read our <Link className="text-indigo-600 underline" to="javascript:void(0)"> Privacy Policy </Link>
                     </p>
                 </div>
             </section>

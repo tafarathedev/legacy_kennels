@@ -8,7 +8,7 @@ import SampleDogs from "./component/SampleDogs"
 import Services from "./component/Services"
 import About_us from "./component/About_us"
 import SampleTestimonials from "./component/SampleTestimonials"
-import ScaleLoader  from "react-spinners/ScaleLoader";
+import SyncLoader  from "react-spinners/SyncLoader";
 
 
 
@@ -21,20 +21,23 @@ function App() {
       setLoading(true)
       setTimeout(()=>{
          setLoading(false)
-      },8000)
+      },3000)
   },[])
   return (
-    <div className="App justify-center">
+<div className="App justify-center">
       {loading? (
-          <ScaleLoader 
-          color={"#333"}
-          loading={loading}
-         
-          aria-label="Loading Spinner"
-          data-testid="loader"
-          size={150}
-        /> ):
-      ( <>
+         <div className=" flex items-center justify-center h-screen">
+            <SyncLoader 
+                  color={"#333"}
+                  loading={loading}
+                
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                  size={30}
+            />
+         </div>
+         ):( 
+ <>
       <Navigation />
       <Hero />
       <About_us />
@@ -43,10 +46,10 @@ function App() {
       <Contact_Us />
       <SampleTestimonials />
       <Footer />
-       </>
+ </>
         )
       }
-    </div>
+</div>
   )
 }
 

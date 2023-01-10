@@ -7,12 +7,12 @@ const Hero = () => {
   className="relative flex items-center justify-center h-screen mb-12 overflow-hidden inset-0 backdrop-blur-sm bg-white/30"
 >
   <div
-    className="relative z-30 p-5 text-2xl text-white bg-none bg-opacity-50 rounded-xl"
+    className="relative z-30 p-5 text-2xl text-white bg-gray-900 bg-opacity-75 rounded-xl"
   >
       {/* hero content */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
-          <h2 className="select-none mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          <h2 className="select-none mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none text-lg text-base">
             Legacy Kennels, Dog Sales and Services
             
           </h2>
@@ -31,10 +31,10 @@ Our specialty is providing clients with puppies from a well thought out and prac
               type="submit"
               className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-yellow-600 hover:bg-yellow-500 focus:shadow-outline focus:outline-none"
             >
-              Find 
+              Search 
             </button>
           </form>
-          <p className="select-none max-w-md mb-10 text-xs font-thin tracking-wide text-gray-300 sm:text-sm sm:mx-auto md:mb-16">
+          <p className="select-none max-w-md mb-10 text-xs font-thin tracking-wide text-gray-300 sm:text-sm sm:mx-auto md:mb-16 ">
           After we have sold you a dog or pet supplies, we will remain available to advise you and develop an appropriate cooperative communication.
           </p>
         </div>

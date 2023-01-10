@@ -10,8 +10,15 @@ const Blogs = () => {
   const blogs =[{
     id:1,
     title:"HOW TO KNOW IF A DOG BREEDER IS REPUTABLE.",
+    img:"https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
     article: "Your new dog is a fur-ever member of your family from the minute you bring them home. However, their first family – the breeder and their parents – play a huge role.....  ",
     time: "13:20PM"
+},{
+  id:2,
+  title:"HOW TO TELL IF A PUPPY IS HEALTHYY",
+  img:"https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+  article: "The first meeting with your puppy is all-important. Not only do you want it to be puppy love at first sight – but it’s a crucial chance to make sure the puppy is healthy enough for adoption! If you visit the breeder prior to bringing home your new pup,",
+  time: "13:20PM"
 }] 
 /*  blogs map  */
 

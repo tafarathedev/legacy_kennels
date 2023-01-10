@@ -8,7 +8,7 @@ import SampleDogs from "./component/SampleDogs"
 import Services from "./component/Services"
 import About_us from "./component/About_us"
 import SampleTestimonials from "./component/SampleTestimonials"
-import SyncLoader  from "react-spinners/SyncLoader";
+import ClimbingBoxLoader  from "react-spinners/ClimbingBoxLoader";
 
 
 
@@ -21,19 +21,19 @@ function App() {
          setLoading(true)
       setTimeout(()=>{
          setLoading(false)
-      },3000)
+      },10000)
   },[])
   return (
 <div className="App justify-center">
       {loading? (
          <div className=" flex items-center justify-center h-screen">
-            <SyncLoader 
+            <ClimbingBoxLoader 
                   color={"#333"}
                   loading={loading}
                 
                   aria-label="Loading Spinner"
                   data-testid="loader"
-                  size={30}
+                  size={50}
             />
          </div>
          ):( 

@@ -3,10 +3,11 @@ import Heading from './Heading'
 import {Link} from 'react-router-dom'
 
 const SampleDogs = () => {
+  const para="In our breeding program we have males with brown coats, and females with brindle, fawn and black coats. This provides our clients with a variety of puppy coats to suit their hearts desire."
   return (
     <div>
 <section>
-<Heading title="Breeding Dogs" para=" ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at? Distin"/>
+<Heading title="Breeding Dogs" para={para}/>
   <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
 
 
@@ -21,7 +22,7 @@ const SampleDogs = () => {
 
           <div className="relative pt-3 bg-white">
             <p className="mt-2">
-              <span className="tracking-wider text-gray-900">Brandy </span>
+              <span className="tracking-wider  text-gray-900">Brandy </span>
             </p>
           </div>
         </Link>

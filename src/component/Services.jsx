@@ -11,9 +11,7 @@ const Services = () => {
         <h2 className="text-3xl font-bold sm:text-4xl text-white dark:bg-gray-900 select-none">Our Services</h2>
   
         <p className="mt-4  text-gray-900 dark:text-white select-none">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-          aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur
-          saepe laborum.
+        Legacy kennels not only provides clients with puppies but also pet grooming services and also the sale of pet supplies as these are very important for a dogs long healthy and happy life at its beloved new home.
         </p>
       </div>
   
@@ -43,11 +41,10 @@ const Services = () => {
             />
           </svg>
   
-          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Training</h2>
+          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Pet Supplies</h2>
   
           <p className="mt-1 text-sm text-white dark:text-gray-900 select-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-            possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+          As dog breeders we very much acknowledge how essential every dog needs its pet supplies such as toys, muzzles, chains, shampoo etc. Henceforth our kennel has pet store to help you acquire all that your puppy needs to stay healthy and happy.
           </p>
         </a>
         <a
@@ -73,11 +70,10 @@ const Services = () => {
             />
           </svg>
   
-          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Training</h2>
+          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Grooming</h2>
   
           <p className="mt-1 text-sm text-white dark:text-gray-900 select-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo
-            possimus adipisci distinctio alias voluptatum blanditiis laudantium.
+          With proper pet grooming, you will get rid of shedding, fleas, ticks and various health conditions. Although many dog owners prefer to groom their dogs at home, having your dog professionally groomed can save you time and energy. It takes a lot of care and patience to groom a dog, A professional grooming session typically consists of the dog being brushed, bathed, and dried, as well as trimmed or clipped with clean, sanitized brushes and clipper blades. 
           </p>
         </a>
         <a
@@ -103,7 +99,7 @@ const Services = () => {
             />
           </svg>
   
-          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Training</h2>
+          <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Pending</h2>
   
           <p className="mt-1 text-sm text-white dark:text-gray-900 select-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo

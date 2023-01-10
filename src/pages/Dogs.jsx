@@ -5,7 +5,7 @@ import Navigation from '../component/Navigation'
 import SingleDog from '../component/SingleDog'
 
 const Dogs = () => {
-  const para="some paragraph here "
+  const para="Our dog store provides you the chance to see the puppies available and from which adult dogs sired them. Feel free to search for your future puppy."
   return (
     <div>
       <Navigation/>

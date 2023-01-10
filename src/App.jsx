@@ -18,7 +18,7 @@ function App() {
  let [loading , setLoading] = useState(false)
 
   useEffect(()=>{
-      setLoading(true)
+         setLoading(true)
       setTimeout(()=>{
          setLoading(false)
       },3000)

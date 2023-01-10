@@ -17,9 +17,8 @@ const Hero = () => {
             
           </h2>
           <p className="select-none mb-6 text-base font-thin tracking-wide text-gray-200 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae. explicabo. Sed ut perspiciatis unde omnis.
+          Welcome to legacy kennels, we are breeders and suppliers of pet related materials.
+Our specialty is providing clients with puppies from a well thought out and practical breeding program. We tailor each breeding with what the dogs breed standard has to have, while insuring it meets the spectrum of demand for clients. Our clients testimonials speak for themselves which demonstrates very high satisfaction rates across the board.
           </p>
           <form className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
             <input
@@ -36,8 +35,7 @@ const Hero = () => {
             </button>
           </form>
           <p className="select-none max-w-md mb-10 text-xs font-thin tracking-wide text-gray-300 sm:text-sm sm:mx-auto md:mb-16">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium.
+          After we have sold you a dog or pet supplies, we will remain available to advise you and develop an appropriate cooperative communication.
           </p>
         </div>
       </div>

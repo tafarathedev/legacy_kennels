@@ -29,15 +29,9 @@ const Products = () => {
 <Product />
 <Product />
 <Product />
-<Product />
-   
-     
-
-                       
-      
 
     </ul>
-
+{/* pagination */}
     <div className="flex mt-6 justify-center text-center">
     <Link to="#" className="flex items-center justify-center px-4 py-2 mx-1 text-gray-500 capitalize bg-white rounded-md cursor-not-allowed rtl:-scale-x-100 dark:bg-gray-800 dark:text-gray-600">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">

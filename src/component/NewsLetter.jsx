@@ -10,7 +10,7 @@ const NewsLetter = () => {
                     <h1 className="text-3xl text-gray-800 font-semibold">
                         Subscribe to our newsletter
                     </h1>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed select-none">
                       Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.  
                     </p>
                 </div>

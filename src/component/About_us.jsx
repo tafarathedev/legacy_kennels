@@ -26,19 +26,19 @@ const About_us = () => {
       </div>
 
       <div className="md:pt-8">
-        <p className="text-yellow-600 font-bold text-center md:text-left">Who we are</p>
+        <p className="text-yellow-600 font-bold text-center md:text-left select-none">Who we are</p>
 
-        <h1 className="text-gray-800 text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Our competitive advantage</h1>
+        <h1 className="select-none text-gray-800 text-2xl sm:text-3xl font-bold text-center md:text-left mb-4 md:mb-6">Our competitive advantage</h1>
 
-        <p className="text-gray-500 sm:text-lg mb-6 md:mb-8">
+        <p className="text-gray-500 sm:text-lg mb-6 md:mb-8 select-none">
           This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.<br /><br />
 
           This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is <a href="#" className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 underline transition duration-100">random</a> or otherwise generatd to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.
         </p>
 
-        <h2 className="text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4">About us</h2>
+        <h2 className="select-none text-gray-800 text-xl sm:text-2xl font-semibold text-center md:text-left mb-2 md:mb-4">About us</h2>
 
-        <p className="text-gray-500 sm:text-lg mb-6 md:mb-8">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise geny text which has no meaning however looks very similar to real text.</p>
+        <p className="select-none text-gray-500 sm:text-lg mb-6 md:mb-8">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise geny text which has no meaning however looks very similar to real text.</p>
       </div>
     </div>
   </div>

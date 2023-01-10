@@ -13,6 +13,7 @@ import Cart from './pages/Cart'
 import Blogs from './pages/Blogs'
 import Dogs from './pages/Dogs'
 import DogDetails from './pages/DogDetails'
+import FAQs from './pages/FAQs'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/dogs" element={<Dogs/>} />
         <Route path="/dogs/dog_details" element={<DogDetails/>} />
         <Route path="/blogs"  element={<Blogs/>}/>
+        <Route path="/frequently_asked_questions"  element={<FAQs/>}/>
         <Route path="/*"element={<NotFound />} />
       </Routes>
     </Router>

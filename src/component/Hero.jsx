@@ -12,11 +12,11 @@ const Hero = () => {
       {/* hero content */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
-          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+          <h2 className="select-none mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
             Legacy Kennels, Dog Sales and Services
             
           </h2>
-          <p className="mb-6 text-base font-thin tracking-wide text-gray-200 md:text-lg">
+          <p className="select-none mb-6 text-base font-thin tracking-wide text-gray-200 md:text-lg">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
             quae. explicabo. Sed ut perspiciatis unde omnis.
@@ -35,7 +35,7 @@ const Hero = () => {
               Find 
             </button>
           </form>
-          <p className="max-w-md mb-10 text-xs font-thin tracking-wide text-gray-300 sm:text-sm sm:mx-auto md:mb-16">
+          <p className="select-none max-w-md mb-10 text-xs font-thin tracking-wide text-gray-300 sm:text-sm sm:mx-auto md:mb-16">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium.
           </p>

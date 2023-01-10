@@ -18,12 +18,46 @@ const DogDetails = () => {
         <ul className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
   
       <ProductDetailsImage/>
+      <ProductDetailsImage/>
+      <ProductDetailsImage/>
+      <ProductDetailsImage/>
+     
       
     </ul>
-    <div>
-    <button type="button" className="justify-center items-center mx-auto content-center">Contact Us +260974125846</button>
+    
+   
     </div>
+    <div className="flex justify-center items-center  mx-6 pt-6">
+    <button type="button" className="bg-yellow-600 text-gray-900 hover:bg-yellow-500 px-4 py-4 rounded">Contact Us +260974125846</button>
     </div>
+  <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold  mb-4 md:mb-6 ">The Parent Dog</h2>
+      <ul className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <li>
+        <a href="#" className="block overflow-hidden group">
+        <img
+            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt=""
+            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+          />
+        </a>
+      </li>
+    
+      <li >
+        <a href="#" className="block overflow-hidden group">
+        <img
+            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt=""
+            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px] rounded"
+          />
+        </a>
+      </li>
+    
+    </ul>
+     
+  </div>
+
     <Footer />
     </>
   )

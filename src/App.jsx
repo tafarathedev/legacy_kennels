@@ -8,7 +8,7 @@ import SampleDogs from "./component/SampleDogs"
 import Services from "./component/Services"
 import About_us from "./component/About_us"
 import SampleTestimonials from "./component/SampleTestimonials"
-import ClimbingBoxLoader  from "react-spinners/ClimbingBoxLoader";
+import DotLoader  from "react-spinners/DotLoader";
 
 
 
@@ -27,13 +27,13 @@ function App() {
 <div className="App justify-center">
       {loading? (
          <div className=" flex items-center justify-center h-screen">
-            <ClimbingBoxLoader 
+            <DotLoader 
                   color={"#333"}
                   loading={loading}
                 
                   aria-label="Loading Spinner"
                   data-testid="loader"
-                  size={50}
+                  size={40}
             />
          </div>
          ):( 

@@ -3,28 +3,26 @@ import Heading from './Heading'
 
 
 const About_us = () => {
+ 
   return (
     <div>
-      
-      <section classNameName="bg-gray-900 dark:bg-white text-white dark:text-gray-900">
-    <div classNameName="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-      <div classNameName="mx-auto max-w-lg text-center">
+       
     <Heading title="About Us" para="we are many things related to a dog business site"/>
-  
-        <p classNameName="mt-4  text-white dark:text-gray-900">
-        
+
+      <section className="bg-gray-900 dark:bg-white text-white dark:text-gray-900">
+    <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-lg text-center">
+        <p className="mt-4  text-white dark:text-gray-900">
         </p>
       </div>
-  
       <div className=" mt-9 bg-white py-6 sm:py-8 lg:py-12">
   <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
       <div>
         <div className="h-auto md:h-auto bg-gray-100 overflow-hidden rounded-lg shadow-lg">
-          <img src="https://images.unsplash.com/photo-1598079253422-638fa9b2d160?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=200" loading="lazy" alt="pitbull" className="w-full h-full object-cover object-center" />
+          <img  src="https://images.unsplash.com/photo-1598079253422-638fa9b2d160?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=200" loading="lazy" alt="pitbull" className="w-full h-full object-cover object-center" />
         </div>
       </div>
-
       <div className="md:pt-8">
         <p className="text-yellow-600 font-bold text-center md:text-left select-none">Who we are</p>
 

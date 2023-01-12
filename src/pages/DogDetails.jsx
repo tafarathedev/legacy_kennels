@@ -4,7 +4,20 @@ import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
 import ProductDetailsImage from '../component/ProductDetailsImage'
 import PuffLoader  from "react-spinners/PuffLoader";
+import ModalImage from "react-modal-image";
 const DogDetails = () => {
+
+  const url = [
+    {
+      id:1,
+      site:"https://images.unsplash.com/photo-1673289072037-de784a40c145?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+    },
+    {
+      id:2,
+      site:"https://images.unsplash.com/photo-1673289072037-de784a40c145?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+    }
+  ]
+  
   let [loading , setLoading] = React.useState(false)
 
   React.useEffect(()=>{
@@ -59,21 +72,21 @@ const DogDetails = () => {
       
       <li>
         <a href="#" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-          />
+        <ModalImage
+  small="https://images.unsplash.com/photo-1673289072037-de784a40c145?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+  large="https://images.unsplash.com/photo-1673389434676-8cdfad013ca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+  alt="Hello World!"  
+/>  
         </a>
       </li>
     
       <li >
         <a href="#" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px] rounded"
-          />
+        <ModalImage
+  small="https://images.unsplash.com/photo-1673289072037-de784a40c145?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+  large="https://images.unsplash.com/photo-1673389434676-8cdfad013ca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
+  alt="Hello World!"  
+/>  
         </a>
       </li>
     

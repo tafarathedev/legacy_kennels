@@ -1,9 +1,31 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import PuffLoader  from "react-spinners/PuffLoader";
 const Login = () => {
+  let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
   return (
 
+  <>
+ { 
+ loading? (
+  <div className=" flex items-center justify-center h-screen">
+  <PuffLoader 
+  color={"#333"}
+  loading={loading}
   
+  aria-label="Loading Spinner"
+  data-testid="loader"
+  size={60}
+  />
+  </div>
+  ):(
   <section className="bg-white dark:bg-gray-900">
     <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
       <section
@@ -204,7 +226,8 @@ const Login = () => {
       </main>
     </div>
   </section>
-  
+  )}
+  </>
   )
 }
 

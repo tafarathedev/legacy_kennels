@@ -4,12 +4,35 @@ import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
 import Product from '../component/SingleProduct'
-
+import PuffLoader  from "react-spinners/PuffLoader";
 const Products = () => {
+    let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
   const para ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, vitae. A aperiam at aliquam reprehenderit nobis fuga repellendus quis culpa?"
   return (
+    
+    
     <div>
    <Navigation />
+   {  
+     loading? (
+        <div className=" flex items-center justify-center h-screen">
+        <PuffLoader 
+        color={"#333"}
+        loading={loading}
+        
+        aria-label="Loading Spinner"
+        data-testid="loader"
+        size={60}
+        />
+        </div>
+        ):(   
    <section className="bg-gray-900 dark:bg-white">
    <Heading title="Pet Store" para={para}/>
   <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
@@ -67,11 +90,12 @@ const Products = () => {
 </div>
   </div>
 </section>
-
+)}
 <footer className="bg-white dark:bg-gray-900">
      <Footer />
  </footer>
   </div>
+  
   )
 }
 

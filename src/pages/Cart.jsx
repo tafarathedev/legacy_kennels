@@ -3,16 +3,40 @@ import {Link} from 'react-router-dom'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
-
+import PuffLoader  from "react-spinners/PuffLoader";
 const Cart = () => {
+  let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
   return (
+    <> 
+    <Navigation />
+    { 
+  loading? (
+    <div className=" flex items-center justify-center h-screen">
+    <PuffLoader 
+    color={"#333"}
+    loading={loading}
+    
+    aria-label="Loading Spinner"
+    data-testid="loader"
+    size={60}
+    />
+    </div>
+    ):(   
+
   <>   
-        <Navigation />
+      <Heading title="Cart" para="all cart items are saved here ready to be checked out" />
+        
         <div className="bg-white py-6 sm:py-8 lg:py-12">
         <br />
   <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
     <div className="mb-6 sm:mb-10 lg:mb-16">
-      <Heading title="Cart" para="all cart items are saved here ready to be checked out" />
     </div>
 
     <div className="flex flex-col gap-4 md:gap-6 mb-6 sm:mb-8">
@@ -194,7 +218,10 @@ const Cart = () => {
   </div>
 
 </div>
-<Footer />
+
+</>
+  )}
+  <Footer />
 </>
   )
 }

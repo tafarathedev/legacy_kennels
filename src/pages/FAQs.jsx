@@ -3,8 +3,16 @@ import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
 import SingleQuestion from '../component/SingleQuestion'
-
+import PuffLoader  from "react-spinners/PuffLoader";
 const FAQs = () => {
+  let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
     /* heading variables */
     const title = "Frequently asked questions"
     const para = "This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated."
@@ -23,8 +31,24 @@ const answer ="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, 
    }
     
   return (
-<>   
-<Navigation />
+    <> 
+    <Navigation />
+    {
+
+loading? (
+  <div className=" flex items-center justify-center h-screen">
+  <PuffLoader 
+  color={"#333"}
+  loading={loading}
+  
+  aria-label="Loading Spinner"
+  data-testid="loader"
+  size={60}
+  />
+  </div>
+  ):(  
+ 
+
       <div className="bg-white py-6 sm:py-8 lg:py-12">
    
         <Heading title={title} para={para}/>
@@ -45,6 +69,8 @@ const answer ="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, 
     </div>
   </div>
 </div>
+ 
+    )}  
 <Footer />
   </>
   )

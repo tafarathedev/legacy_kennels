@@ -8,7 +8,7 @@ import SampleDogs from "./component/SampleDogs"
 import Services from "./component/Services"
 import About_us from "./component/About_us"
 import SampleTestimonials from "./component/SampleTestimonials"
-import DotLoader  from "react-spinners/DotLoader";
+import PuffLoader  from "react-spinners/PuffLoader";
 
 
 
@@ -21,19 +21,19 @@ function App() {
          setLoading(true)
       setTimeout(()=>{
          setLoading(false)
-      },10000)
+      },8000)
   },[])
   return (
 <div className="App justify-center">
       {loading? (
          <div className=" flex items-center justify-center h-screen">
-            <DotLoader 
+            <PuffLoader 
                   color={"#333"}
                   loading={loading}
                 
                   aria-label="Loading Spinner"
                   data-testid="loader"
-                  size={40}
+                  size={60}
             />
          </div>
          ):( 

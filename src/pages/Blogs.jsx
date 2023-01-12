@@ -4,8 +4,16 @@ import Navigation from '../component/Navigation'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import SingleBlog from '../component/SingleBlog'
-
+import PuffLoader  from "react-spinners/PuffLoader";
 const Blogs = () => {
+  let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
   /* blogs object here */
   const blogs =[{
     id:1,
@@ -30,9 +38,24 @@ key={blog.id} blog={blog}
   /* js Executions at bottom   */
 const pageTitle = "Blogs"
 const para ="Legacy kennels provides weekly blogs concerning dogs in general. Feel free every week to come through and gain some knowledge about dogs which in return will help make you an excellent and responsible pet owner."
-  return (
+return (
+    <> 
+<Navigation />
+    {  
+     loading? (
+      <div className=" flex items-center justify-center h-screen">
+      <PuffLoader 
+      color={"#333"}
+      loading={loading}
+      
+      aria-label="Loading Spinner"
+      data-testid="loader"
+      size={60}
+      />
+      </div>
+      ):(  
+    
        <>   
-    <Navigation />
     <Heading title={pageTitle} para={para} />
    {/*  <!-- Component Code --> */}
 <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
@@ -44,8 +67,10 @@ const para ="Legacy kennels provides weekly blogs concerning dogs in general. Fe
   </div>
 </div>
 {/* Footer section here */}
-    <Footer />
  
+  </>
+   )} 
+   <Footer />
   </>
   )
 }

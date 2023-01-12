@@ -3,12 +3,35 @@ import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import Navigation from '../component/Navigation'
 import ProductDetailsImage from '../component/ProductDetailsImage'
-
+import PuffLoader  from "react-spinners/PuffLoader";
 const DogDetails = () => {
+  let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
     const para ="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quaerat porro cum illo aspernatur quibusdam dolore, accusantium cumque! Quo a iure hic, et id quisquam repellat itaque mollitia saepe?"
   return (
+    <>  
+ <Navigation />
+    {
+ loading? (
+  <div className=" flex items-center justify-center h-screen">
+  <PuffLoader 
+  color={"#333"}
+  loading={loading}
+  
+  aria-label="Loading Spinner"
+  data-testid="loader"
+  size={60}
+  />
+  </div>
+  ):(
     <>
-    <Navigation />
+   
     
     
     
@@ -58,7 +81,9 @@ const DogDetails = () => {
      
   </div>
 
-    <Footer />
+    </>
+      )}
+      <Footer />
     </>
   )
 }

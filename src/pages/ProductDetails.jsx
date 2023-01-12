@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import Footer from "../component/Footer";
 import Navigation from "../component/Navigation";
+import PuffLoader  from "react-spinners/PuffLoader";
 const ProductDetails = () => {
+    let [loading , setLoading] = React.useState(false)
+
+  React.useEffect(()=>{
+         setLoading(true)
+      setTimeout(()=>{
+         setLoading(false)
+        },2000)
+      },[])
     const [rotate, setRotate] = useState(false);
     const [count, setCount] = useState(0);
 
@@ -16,6 +25,20 @@ const ProductDetails = () => {
     };
 
     return (
+        <>  
+        { 
+        loading? (
+            <div className=" flex items-center justify-center h-screen">
+            <PuffLoader 
+            color={"#333"}
+            loading={loading}
+            
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            size={60}
+            />
+            </div>
+            ):(  
         <>   
          <Navigation />
         <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
@@ -163,6 +186,8 @@ const ProductDetails = () => {
             </div>
         </div>
         <Footer />
+        </>
+        )}
         </>
     );
 };

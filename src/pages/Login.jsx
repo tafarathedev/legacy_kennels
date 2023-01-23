@@ -1,9 +1,18 @@
+
+
 import React from 'react'
 import {Link} from 'react-router-dom'
 import PuffLoader  from "react-spinners/PuffLoader";
+import Footer from '../component/Footer';
+import Navigation from '../component/Navigation';
 const Login = () => {
   let [loading , setLoading] = React.useState(false)
+  /* //login functions and states */ 
+  const [email  , setEmail ] = React.useState("")
+  const [password , setPassword]= React.useState(null)
+  const [error, setError] = React.useState(null)
 
+ 
   React.useEffect(()=>{
          setLoading(true)
       setTimeout(()=>{
@@ -11,8 +20,9 @@ const Login = () => {
         },2000)
       },[])
   return (
-
+   
   <>
+  <Navigation />
  { 
  loading? (
   <div className=" flex items-center justify-center h-screen">
@@ -91,7 +101,7 @@ const Login = () => {
             <h1
               className="mt-2 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl md:text-4xl"
             >
-              Welcome to Squid 🦑
+              Welcome to Legacy Kennels 🦑
             </h1>
   
             <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
@@ -112,6 +122,7 @@ const Login = () => {
               <input
                 type="text"
                 id="FirstName"
+                style={{padding:'10px'}}
                 name="first_name"
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
               />
@@ -128,6 +139,7 @@ const Login = () => {
               <input
                 type="text"
                 id="LastName"
+                style={{padding:'10px'}}
                 name="last_name"
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
               />
@@ -145,6 +157,7 @@ const Login = () => {
                 type="email"
                 id="Email"
                 name="email"
+                style={{padding:'10px'}}
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
               />
             </div>
@@ -160,6 +173,7 @@ const Login = () => {
               <input
                 type="password"
                 id="Password"
+                style={{padding:'10px'}}
                 name="password"
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
               />
@@ -177,6 +191,8 @@ const Login = () => {
                 type="password"
                 id="PasswordConfirmation"
                 name="password_confirmation"
+                style={{padding:'10px'}}
+
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
               />
             </div>
@@ -186,6 +202,7 @@ const Login = () => {
                 <input
                   type="checkbox"
                   id="MarketingAccept"
+                style={{padding:'10px'}}
                   name="marketing_accept"
                   className="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
                 />
@@ -227,6 +244,7 @@ const Login = () => {
     </div>
   </section>
   )}
+  <Footer />
   </>
   )
 }

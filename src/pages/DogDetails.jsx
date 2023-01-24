@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import ProductDetailsImage from '../component/ProductDetailsImage'
 import PuffLoader  from "react-spinners/PuffLoader";
 import ModalImage from "react-modal-image";
@@ -29,7 +29,7 @@ const DogDetails = () => {
     const para ="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quaerat porro cum illo aspernatur quibusdam dolore, accusantium cumque! Quo a iure hic, et id quisquam repellat itaque mollitia saepe?"
   return (
     <>  
- <Navigation />
+ <UserNavigation />
     {
  loading? (
   <div className=" flex items-center justify-center h-screen">

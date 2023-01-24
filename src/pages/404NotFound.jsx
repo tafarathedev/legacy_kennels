@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../component/Footer'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import PuffLoader  from "react-spinners/PuffLoader";
 
 const $404NotFound = () => {
@@ -15,7 +15,7 @@ const $404NotFound = () => {
       return (
         
    <>
-<Navigation />
+<UserNavigation />
     {
       loading? (
         <div className=" flex items-center justify-center h-screen">

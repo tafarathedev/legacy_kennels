@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import SingleQuestion from '../component/SingleQuestion'
 import PuffLoader  from "react-spinners/PuffLoader";
 const FAQs = () => {
@@ -32,7 +32,7 @@ const answer ="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, 
     
   return (
     <> 
-    <Navigation />
+    <UserNavigation />
     {
 
 loading? (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../component/Footer";
-import Navigation from "../component/Navigation";
+import UserNavigation from "../component/UserNavigation";
 import PuffLoader  from "react-spinners/PuffLoader";
 const ProductDetails = () => {
     let [loading , setLoading] = React.useState(false)
@@ -40,7 +40,7 @@ const ProductDetails = () => {
             </div>
             ):(  
         <>   
-         <Navigation />
+         <UserNavigation />
         <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
             
             <div className="flex justify-center items-center lg:flex-row flex-col gap-8">

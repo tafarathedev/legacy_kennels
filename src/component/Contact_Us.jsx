@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 const Contact_Us = () => {
   return (
@@ -21,8 +22,8 @@ const Contact_Us = () => {
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae.
           </p>
-          <a
-            href="/"
+          <Link
+            to="/"
             aria-label=""
             className="select-none inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
           >
@@ -34,7 +35,7 @@ const Contact_Us = () => {
             >
               <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
             </svg>
-          </a>
+          </Link>
         </div>
         <div className="w-full max-w-xl xl:px-8 xl:w-5/12 select-none">
           <div className="relative">

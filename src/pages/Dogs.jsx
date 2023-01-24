@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import SingleDog from '../component/SingleDog'
 import PuffLoader  from "react-spinners/PuffLoader";
 const Dogs = () => {
@@ -16,7 +16,7 @@ const Dogs = () => {
   const para="Our dog store provides you the chance to see the puppies available and from which adult dogs sired them. Feel free to search for your future puppy."
   return (
     <> 
-     <Navigation/>
+     <UserNavigation/>
     { 
     loading? (
       <div className=" flex items-center justify-center h-screen">

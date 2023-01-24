@@ -222,7 +222,7 @@ const Footer = () => {
                   </div>
                   <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
                     <p className="text-sm text-gray-100 select-none">
-                      © Copyright 2023 <a href="https://github.com/tafarathedev">Tafarathedev</a>. All rights reserved.
+                      © Copyright 2023 <Link to="https://github.com/tafarathedev">Tafarathedev</Link>. All rights reserved.
                     </p>
                     <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                       <Link

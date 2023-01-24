@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
 import SingleBlog from '../component/SingleBlog'
@@ -40,7 +40,7 @@ const pageTitle = "Blogs"
 const para ="Legacy kennels provides weekly blogs concerning dogs in general. Feel free every week to come through and gain some knowledge about dogs which in return will help make you an excellent and responsible pet owner."
 return (
     <> 
-<Navigation />
+<UserNavigation />
     {  
      loading? (
       <div className=" flex items-center justify-center h-screen">

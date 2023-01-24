@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Footer from '../component/Footer'
 import Heading from '../component/Heading'
-import Navigation from '../component/Navigation'
+import UserNavigation from '../component/UserNavigation'
 import Product from '../component/SingleProduct'
 import PuffLoader  from "react-spinners/PuffLoader";
 const Products = () => {
@@ -19,7 +19,7 @@ const Products = () => {
     
     
     <div>
-   <Navigation />
+   <UserNavigation />
    {  
      loading? (
         <div className=" flex items-center justify-center h-screen">

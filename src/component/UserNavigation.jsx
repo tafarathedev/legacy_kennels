@@ -20,7 +20,7 @@ const UserNavigation =({name, email})=> {
   async function handleSignOut(){
     AuthService.logout(currentUser.user.token);
     const notify = () => toast.info('🦄Logging you Out', {
-      position: "bottom-left",
+      position: "top-left",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,

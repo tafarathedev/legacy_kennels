@@ -15,27 +15,27 @@ const UserNavigation =({name, email})=> {
   const [msg , setMsg] = React.useState("")
   
   const navigate = useNavigate()
-
+  const notify = () => toast.success(`Logging out`, {
+    position: "top-left",
+    autoClose: 3000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    });
   
   //handle signOut Function
   async function handleSignOut(){
      AuthService.logout(currentUser.user.token);
-    const notify = () => toast.success(`🦄${msg}`, {
-      position: "top-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      });
+   
    if(currentUser){
     setIsOpen(prevState=>!prevState)
     setVisible(prevState=>!prevState)
     setTimeout(()=>{
           //run a toast notification
-              setMsg("Loging you Out")
+             
               notify()
           setTimeout(()=>{
             navigate("/")

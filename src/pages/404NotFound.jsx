@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../component/Footer'
 import UserNavigation from '../component/UserNavigation'
+import { Link } from 'react-router-dom'
 import PuffLoader  from "react-spinners/PuffLoader";
 
 const $404NotFound = () => {

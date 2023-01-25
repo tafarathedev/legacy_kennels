@@ -40,7 +40,7 @@ const navigate  = useNavigate()
    const notify = () => toast.success(`${msg}`, {
     position: "top-left",
     autoClose: 3000,
-    hideProgressBar: false,
+    hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
@@ -53,7 +53,7 @@ const navigate  = useNavigate()
      event.preventDefault()
    
     try {
-       const res = await AuthService.signup(user.email, user.password, user.firstName, user.lastName, user.agree)
+       const res = await AuthService.signup(user.email.toLocaleLowerCase().toString().trim(), user.password.toString().trim(), user.firstName.toLocaleLowerCase().toString().trim(), user.lastName.toLocaleLowerCase().toString().trim(), user.agree)
               if(res){
                 setUser(res)
                 setMsg(res.message)
@@ -85,6 +85,7 @@ const navigate  = useNavigate()
                 </h1>
                 <form 
                 onSubmit={handleSignUp}
+                autocomplete="off"
                 className="space-y-4 md:space-y-6">
                   {/* email */}
                    <div className="relative">
@@ -120,7 +121,7 @@ const navigate  = useNavigate()
                           <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">I accept the <Link className="font-medium text-primary-600 hover:underline dark:text-primary-500" to="#">Terms and Conditions</Link></label>
                         </div>
                     </div>
-                    <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
+                    <button type="submit" className="w-full text-white bg-indigo-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign Up</button>
                     <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                         Don't have an account? <Link to="/login" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</Link>
                     </p>

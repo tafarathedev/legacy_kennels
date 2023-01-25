@@ -1,4 +1,7 @@
 import axios from '../api/axios.js'
+import { GetCookie } from '../hooks/getCookies.js';
+import { SetCookies } from '../hooks/SetCookies.js';
+import { RemoveCookie } from '../hooks/removeCookies.js';
 
 
 const signup = (email, password, firstName,lastName, agree) => {
@@ -10,12 +13,13 @@ const signup = (email, password, firstName,lastName, agree) => {
         lastName,
         agree
     })
-    .then((response) => {
-      if (response.data.token) {
-        localStorage.setItem("user", JSON.stringify(response.data));
+    .then((res) => {
+      if (res.data) {
+        SetCookies("user", JSON.stringify(res.data))
+        //localStorage.setItem("user", JSON.stringify(res.data));
       }
 
-      return response.data;
+      return res.data;
     });
 };
 
@@ -25,23 +29,26 @@ const login = (email, password) => {
       email,
       password,
     })
-    .then((response) => {
-      if (response.data) {
-        localStorage.setItem("user", JSON.stringify(response.data));
+    .then((res) => {
+      if (res.data) {
+        SetCookies("user", JSON.stringify(res.data))
+        //localStorage.setItem("user", JSON.stringify(res.data));
       }
 
-      return response.data;
+      return res.data;
     });
 };
 
-const logout = (token) => {
-  return localStorage.removeItem("user");
-      
+const logout = () => {
+ return  RemoveCookie("user")
+ 
 };
 
 const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem("user"));
-};
+ return GetCookie("user")
+
+}
+
 
 const authService = {
   signup,

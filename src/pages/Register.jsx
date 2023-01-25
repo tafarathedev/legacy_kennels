@@ -19,7 +19,7 @@ const Register = () => {
     lastName:"",
     agree:false
    })
-  const[errMsg , setErrMsg] = React.useState('')
+   const [msg , setMsg] = React.useState("")
 
 //navigation function to restrit goin back to route
 const navigate  = useNavigate() 
@@ -35,13 +35,13 @@ const navigate  = useNavigate()
            }
      })
    }
-  console.log(user)
+  
 
    //handle Sign up function
   async function handleSignUp(event){
      event.preventDefault()
-    const notify = () => toast.success('🦄Creating your Account', {
-      position: "bottom-left",
+     const notify = () => toast.success(`${msg}`, {
+      position: "top-left",
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -50,43 +50,19 @@ const navigate  = useNavigate()
       progress: undefined,
       theme: "light",
       });;
+   
     try {
-        await AuthService.signup(user.email, user.password, user.firstName, user.lastName, user.agree).then(
-          (response) => {
-            // check for token and user already exists with 200
-            if (response) {
+       const res = await AuthService.signup(user.email, user.password, user.firstName, user.lastName, user.agree)
+              if(res){
+                setUser(res)
+                setMsg(res.message)
+                notify()
                 setTimeout(()=>{
-                  notify()
-                  setUser({
-                    email:"",
-                    password:"",
-                    agree:false
-                  })
-                      setTimeout(()=>{  
-                        navigate("/");
-                        window.location.reload();
-                        console.log(res.data)
-                      },3000)
-                  },0)
-              /*   notify()
-                setUser({
-                        email:"",
-                        password:"",
-                        isChecked:false
-                       })
-                     
-            }else{ */
-              
-               
-                setErrMsg("Check your inputs")
-            }
-            //   console.log("Sign up successfully", response);
-         
-          },
-          (error) => {
-            console.log(error);
-          }
-        );
+                    navigate("/")
+                    window.location.reload()
+                },2000)
+              }
+      
       } catch (err) {
         console.log(err);
       }

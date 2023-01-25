@@ -51,9 +51,9 @@ const navigate  = useNavigate()
       });;
     try {
         await AuthService.login(user.email, user.password).then(
-          (response) => {
+          (res) => {
             // check for token and user already exists with 200
-            if (response) {
+            if (res.data) {
                 setTimeout(()=>{
                   notify()
                   setUser({
@@ -72,7 +72,7 @@ const navigate  = useNavigate()
                
                 setErrMsg("Check your inputs")
             }
-            //   console.log("Sign up successfully", response);
+            //   console.log("Sign up successfully", res);
          
           },
           (error) => {

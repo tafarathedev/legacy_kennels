@@ -17,8 +17,11 @@ import DogDetails from './pages/DogDetails'
 import FAQs from './pages/FAQs'
 
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    
     <Router>
       <Routes>
         <Route path="/" element={<App/>} />
@@ -34,8 +37,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/blogs"  element={<Blogs/>}/>
         <Route path="/frequently_asked_questions"  element={<FAQs/>}/>
         <Route path="*"  element={<NotFound />} />
-        
       </Routes>
     </Router>
+   
   </React.StrictMode>,
 )

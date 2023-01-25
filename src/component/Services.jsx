@@ -15,7 +15,7 @@ const Services = () => {
         </p>
       </div>
   
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 " >
        
   
         <p
@@ -73,7 +73,7 @@ const Services = () => {
           <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Grooming</h2>
   
           <p className="mt-1 text-sm text-white dark:text-gray-900 select-none">
-          With proper pet grooming, you will get rid of shedding, fleas, ticks and various health conditions. Although many dog owners prefer to groom their dogs at home, having your dog professionally groomed can save you time and energy. It takes a lot of care and patience to groom a dog, A professional grooming session typically consists of the dog being brushed, bathed, and dried, as well as trimmed or clipped with clean, sanitized brushes and clipper blades. 
+          With proper pet grooming, you will get rid of shedding, fleas, ticks and various health conditions. Although many dog owners prefer to groom their dogs at home, having your dog professionally groomed can save you time and energy...
           </p>
         </p>
         <p
@@ -101,8 +101,8 @@ const Services = () => {
   
           <h2 className="mt-4 text-xl font-bold text-white dark:text-gray-900 select-none">Dog Grooming</h2>
   
-          <p className="mt-1 text-sm text-white dark:text-gray-900 select-none">
-          With proper pet grooming, you will get rid of shedding, fleas, ticks and various health conditions. Although many dog owners prefer to groom their dogs at home, having your dog professionally groomed can save you time and energy. It takes a lot of care and patience to groom a dog, A professional grooming session typically consists of the dog being brushed, bathed, and dried, as well as trimmed or clipped with clean, sanitized brushes and clipper blades. 
+          <p className="mt-1 text-sm text-white dark:text-gray-900 select-none " >
+          With proper pet grooming, you will get rid of shedding, fleas, ticks and various health conditions. Although many dog owners prefer to groom their dogs at home, having your dog professionally groomed can save you time and energy.
           </p>
         </p>
       </div>

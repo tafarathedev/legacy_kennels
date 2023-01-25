@@ -14,7 +14,7 @@ const signup = (email, password, firstName,lastName, agree) => {
         agree
     })
     .then((res) => {
-      if (res.data) {
+      if (res.data.token) {
         SetCookie("user", JSON.stringify(res.data))
         //localStorage.setItem("user", JSON.stringify(res.data));
       }
@@ -26,11 +26,12 @@ const signup = (email, password, firstName,lastName, agree) => {
 const login = (email, password) => {
   return axios
     .post("login", {
-      email,
-      password,
+        email,
+        password,
+
     })
     .then((res) => {
-      if (res.data) {
+      if (res.data.token) {
         SetCookie("user", JSON.stringify(res.data))
         //localStorage.setItem("user", JSON.stringify(res.data));
       }
@@ -38,6 +39,8 @@ const login = (email, password) => {
       return res.data;
     });
 };
+
+
 
 const logout = () => {
  return  RemoveCookie("user")

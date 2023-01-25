@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'https://dog-site-api.onrender.com/api/user/'
+    baseURL: 'http://localhost:5050/api/user/'
 });

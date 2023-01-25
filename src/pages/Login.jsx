@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState , useEffect} from 'react'
 import logo from '../assets/LK.svg'
 import {useNavigate ,Link} from 'react-router-dom'
 import AuthService from '../services/Auth.service.js'
@@ -12,59 +12,48 @@ import { ToastContainer, toast  } from "react-toastify";
 
 const Login = () => {
    //user registration state
-   const [user , setUser] =React.useState({
-    email:"",
-    password:""
-   })
-  const[errMsg , setErrMsg] = React.useState('')
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+ 
 
 //navigation function to restrit goin back to route
 const navigate  = useNavigate() 
 
+const notify = () => toast.success(`Login Success`, {
+  position: "top-left",
+  autoClose: 3000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress:'',
+  theme: "light",
+  });;
 
-//handle input change function
-   function handleChange(event){
-    const {name, type , checked, value} = event.target
-     setUser((prevInfo)=>{
-          return  {
-            ...prevInfo,
-            [name]:type ==="checkbox"?checked: value
-           }
-     })
-   }
-  
 
    //handle Sign up function
-  async function handleLogin(event){
-     event.preventDefault()
-    const notify = () => toast.success('🦄Logging In', {
-      position: "top-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      });;
+   const handleLogin = async (e) => {
+    e.preventDefault();
     try {
-        //grab the fetched response from the service auth 
-      const res = await AuthService.signup(user.email, user.password, user.firstName, user.lastName, user.agree)
-      //verify if there is any data response
-      if(res){
-        setUser(res)
-        setMsg(res.message)
-        notify()
-        setTimeout(()=>{
-            navigate("/")
-        },2000)
-      }
- 
-      } catch (err) {
-        return new Error(err.message);
-      }
-   }
-  
+      await AuthService.login(email, password).then(
+        () => {
+          
+
+            notify()
+            setTimeout(()=>{
+              navigate("/");
+              
+            },2000)
+          
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>   
@@ -83,22 +72,16 @@ const navigate  = useNavigate()
                 <form 
                 onSubmit={handleLogin}
                 className="space-y-4 md:space-y-6">
-                    <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                        <input type="email" name="email" value={user.email}  onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required/>
+                      {/* email */}
+                      <div className="relative">
+                          <input type="email" id="floating_outlined" name="email" value={email}   onChange={(e) => setEmail(e.target.value)} className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 dark:bg-gray-800   rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                         <label htmlFor="floating_outlined" className="absolute bg-trasnparent text-sm text-gray-600 dark:text-gray-50 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-800  px-2 peer-focus:px-2 peer-focus:text-gray-800 peer-focus:dark:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">E-mail Address</label>
                     </div>
-                    <div>
-                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                        <input type="password" name="password" onChange={handleChange} placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
-                    </div>
-                   
-                    <div className="flex items-start">
-                        <div className="flex items-center h-5">
-                          <input id="terms" aria-describedby="terms" type="checkbox" name="isChecked" onChange={handleChange} value={user.isChecked} className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
-                        </div>
-                        <div className="ml-3 text-sm">
-                          <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">I accept the <Link className="font-medium text-primary-600 hover:underline dark:text-primary-500" to="#">Terms and Conditions</Link></label>
-                        </div>
+               
+                {/* password */}
+                <div className="relative">
+                          <input type="password" id="floating_outlined" name="password" value={password}   onChange={(e) => setPassword(e.target.value)}className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 dark:bg-gray-800   rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                         <label htmlFor="floating_outlined" className="absolute bg-trasnparent text-sm text-gray-600 dark:text-gray-50 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-gray-800  px-2 peer-focus:px-2 peer-focus:text-gray-800 peer-focus:dark:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Set Password</label>
                     </div>
                     <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
                     <p className="text-sm font-light text-gray-500 dark:text-gray-400">

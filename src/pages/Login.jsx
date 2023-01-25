@@ -3,8 +3,7 @@ import logo from '../assets/LK.svg'
 import {useNavigate ,Link} from 'react-router-dom'
 import AuthService from '../services/Auth.service.js'
 import { ToastContainer, toast  } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-import Footer from '../component/Footer';
+
 
 
 

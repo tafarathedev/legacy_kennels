@@ -15,8 +15,7 @@ const Login = () => {
    //user registration state
    const [user , setUser] =React.useState({
     email:"",
-    password:"",
-    isChecked:false
+    password:""
    })
   const[errMsg , setErrMsg] = React.useState('')
 
@@ -50,37 +49,20 @@ const navigate  = useNavigate()
       theme: "light",
       });;
     try {
-        await AuthService.login(user.email, user.password).then(
-          (res) => {
-            // check for token and user already exists with 200
-            if (res.data) {
-                setTimeout(()=>{
-                  notify()
-                  setUser({
-                    email:"",
-                    password:"",
-                    isChecked:false
-                  })
-                      setTimeout(()=>{  
-                        navigate("/");
-                        window.location.reload();
-                        console.log(res.data)
-                      },3000)
-                  },0)
-             
-              
-               
-                setErrMsg("Check your inputs")
-            }
-            //   console.log("Sign up successfully", res);
-         
-          },
-          (error) => {
-            console.log(error);
-          }
-        );
+        //grab the fetched response from the service auth 
+      const res = await AuthService.signup(user.email, user.password, user.firstName, user.lastName, user.agree)
+      //verify if there is any data response
+      if(res){
+        setUser(res)
+        setMsg(res.message)
+        notify()
+        setTimeout(()=>{
+            navigate("/")
+        },2000)
+      }
+ 
       } catch (err) {
-        console.log(err);
+        return new Error(err.message);
       }
    }
   

@@ -59,12 +59,11 @@ const navigate  = useNavigate()
                 notify()
                 setTimeout(()=>{
                     navigate("/")
-                    window.location.reload()
                 },2000)
               }
       
       } catch (err) {
-        console.log(err);
+        return new Error(err);
       }
    }
   

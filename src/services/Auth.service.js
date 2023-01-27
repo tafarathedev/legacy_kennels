@@ -6,7 +6,7 @@ import { RemoveCookie } from '../hooks/removeCookie.js';
 
 const signup = (email, password, firstName,lastName, agree) => {
   return axios
-    .post("create", {
+    .post("/create_user", {
         email,
         password,
         firstName,
@@ -25,7 +25,7 @@ const signup = (email, password, firstName,lastName, agree) => {
 
 const login = (email, password) => {
   return axios
-    .post("login", {
+    .post("/login", {
         email,
         password,
 
@@ -42,8 +42,8 @@ const login = (email, password) => {
 
 
 
-const logout = () => {
- return  RemoveCookie("user")
+function logout(){
+ RemoveCookie("user")
  
 };
 

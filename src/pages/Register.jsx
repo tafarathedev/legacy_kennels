@@ -21,6 +21,7 @@ const Register = () => {
     agree:false
    })
    const [msg , setMsg] = React.useState("")
+   const [errMsg , setErrMsg] = React.useState("")
 
 //navigation function to restrit goin back to route
 const navigate  = useNavigate() 
@@ -37,7 +38,7 @@ const navigate  = useNavigate()
      })
    }
   
-   const notify = () => toast.success(`${msg}`, {
+   const notify = () => toast.success("signing you in", {
     position: "top-left",
     autoClose: 3000,
     hideProgressBar: true,
@@ -47,24 +48,41 @@ const navigate  = useNavigate()
     progress:'',
     theme: "light",
     });;
-
+     const warning = () => toast.warning("Error occurred", {
+      position: "top-left",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress:'',
+      theme: "dark",  
+      });
+ 
    //handle Sign up function
    async function handleSignUp(event){
      event.preventDefault()
    
     try {
        const res = await AuthService.signup(user.email.toLocaleLowerCase().toString().trim(), user.password.toString().trim(), user.firstName.toLocaleLowerCase().toString().trim(), user.lastName.toLocaleLowerCase().toString().trim(), user.agree)
+       setMsg('Signing you up')
               if(res){
+                
                 setUser(res)
-                setMsg(res.message)
                 notify()
                 setTimeout(()=>{
                     navigate("/")
+                    window.location.reload()  
                 },2000)
               }
       
       } catch (err) {
-        return new Error(err);
+          setErrMsg("error occurred")
+       
+        warning()
+        setTimeout(()=>{
+         window.location.reload()  
+      },2000)
       }
    }
   
@@ -85,7 +103,7 @@ const navigate  = useNavigate()
                 </h1>
                 <form 
                 onSubmit={handleSignUp}
-                autocomplete="off"
+                autoComplete="off"
                 className="space-y-4 md:space-y-6">
                   {/* email */}
                    <div className="relative">

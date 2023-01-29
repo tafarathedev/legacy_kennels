@@ -15,13 +15,12 @@ const Login = () => {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
    const [agree, setAgree] = useState(false);
-    const [errMsg ,setErrMsg] = useState('')
-    const [successMsg ,setSuccessMsg] = useState('')
+   
  
 //navigation function to restrit goin back to route
 const navigate  = useNavigate() 
 
-const warning = () => toast.warning(errMsg, {
+const warning = () => toast.warning("you are logged in", {
   position: "top-left",
   autoClose: 3000,
   hideProgressBar: true,
@@ -32,7 +31,7 @@ const warning = () => toast.warning(errMsg, {
   theme: "dark",  
   });
 
-  const notify = () => toast.warning(successMsg, {
+  const notify = () => toast.warning("something went wrong", {
     position: "top-left",
     autoClose: 3000,
     hideProgressBar: true,
@@ -51,7 +50,7 @@ const warning = () => toast.warning(errMsg, {
      let res = await AuthService.login(email.toLocaleLowerCase().toString().trim(), password.toString().trim())
          
        if(res){
-        setSuccessMsg(res.message)
+       
         notify()
         setTimeout(()=>{
           navigate("/");
@@ -62,6 +61,7 @@ const warning = () => toast.warning(errMsg, {
     } catch (err) {
      /*  console.log(err.response.data.error);
       setErrMsg(err.response.data.error)*/
+      
       warning() 
        setTimeout(()=>{
         window.location.reload()
@@ -71,7 +71,7 @@ const warning = () => toast.warning(errMsg, {
 
   return (
     <>   
-    <ToastContainer/>
+    
 <section className="bg-gray-50 dark:bg-gray-900">
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <Link to="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">

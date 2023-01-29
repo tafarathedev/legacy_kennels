@@ -31,14 +31,14 @@ const Hero = () => {
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link
-          className="block w-full rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+          className="block w-full rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white hover:animate-pulse hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
           to="/dogs"
         >
           Puppy Store
         </Link>
 
         <Link
-          className="block w-full rounded border border-gray-900   bg-gray-900 px-12 py-3 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring active:bg-gray-900 sm:w-auto"
+          className="block w-full rounded border border-gray-900   bg-gray-900 px-12 py-3 text-sm font-medium text-white hover:bg-gray-900 hover:animate-pulse focus:outline-none focus:ring active:bg-gray-900 sm:w-auto"
           to="/products"
         >
          Product Store

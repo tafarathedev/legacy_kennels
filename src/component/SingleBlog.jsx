@@ -5,7 +5,7 @@ const SingleBlog = props => {
   return (
     <div className="rounded overflow-hidden shadow-lg">
   <Link to="#"><div className="relative">
-    <img className="w-full" src={props.blog.img} alt="Sunset in the mountains" />
+    <img className="w-full" src="" alt="Sunset in the mountains" />
 <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
 
     <Link to="!#"><div className="text-sm absolute top-0 right-0 bg-gray-600 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-gray-600 transition duration-500 ease-in-out">
@@ -14,15 +14,15 @@ const SingleBlog = props => {
       </div></Link>
     </div></Link>
   <div className="px-6 py-4">
-    <Link to="#" className="font-semibold text-lg inline-block hover:text-gray-600 transition duration-500 ease-in-out">{props.blog.title}</Link>
+    <Link to="#" className="font-semibold text-lg inline-block hover:text-gray-600 transition duration-500 ease-in-out"></Link>
     <p className="text-gray-500 text-sm">
-      {props.blog.article}
+    {/*   {props.blog.article} */}
     </p>
   </div>
   <div className="px-6 py-2 flex flex-row items-center">
     <span to="#" className="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
 
-      <span className="ml-1">{props.blog.time}</span></span>
+      <span className="ml-1"></span></span>
   </div>
 </div>
     

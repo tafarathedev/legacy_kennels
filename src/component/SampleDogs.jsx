@@ -1,8 +1,38 @@
 import React from 'react'
+import axios from '../api/axios.js'
 import Heading from './Heading'
-import {Link} from 'react-router-dom'
+import {Link , useSearchParams} from 'react-router-dom'
+import SingleDog from './SingleDog.jsx'
 
 const SampleDogs = () => {
+  const [dogs , setDogs] = React.useState([])
+  const [currentPage, setCurrentPage ] = React.useState(1)
+  const [dogPerPage ] = React.useState(4)
+
+  
+  React.useEffect(()=>{
+    // GET /tasks?limit=10&skip=20
+  axios.get('/dogs/' ,{mode:"cors"})
+  .then(res=>{
+     
+     if(res.data.dog){
+         console.log(res.data.dog)
+       
+         
+         setDogs(res.data.dog)
+     }
+     return res.data
+  })
+  .catch(err=>console.log(err))
+},[])
+
+
+
+  //get indexOf last page
+  const IndexOfLastPage = currentPage * 4
+  const IndexOfFirstPage = IndexOfLastPage - 4
+  const currentDog = dogs.slice(IndexOfFirstPage,IndexOfLastPage)
+ 
   const para="In our breeding program we have males with brown coats, and females with brindle, fawn and black coats. This provides our clients with a variety of puppy coats to suit their hearts desire."
   return (
     <div>
@@ -12,74 +42,10 @@ const SampleDogs = () => {
 
 
     <ul className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
-      <li>
-        <Link to="#" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-          />
-
-          <div className="relative pt-3 bg-white">
-            <p className="mt-2">
-              <span className="tracking-wider  text-gray-900">Brandy </span>
-            </p>
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="#" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-          />
-
-          <div className="relative pt-3 bg-white">
-          
-
-            <p className="mt-2">
-                <span className="tracking-wider text-gray-900"> Dog Name </span>
-            </p>
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="#" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-          />
-
-          <div className="relative pt-3 bg-white">
-             <p className="mt-2">
-            <span className="tracking-wider text-gray-900"> Dog Name </span>
-            </p>
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link to="/dog" className="block overflow-hidden group">
-        <img
-            src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt=""
-            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-          />
-
-          <div className="relative pt-3 bg-white">
-           
-
-            <p className="mt-2">
-               <span className="tracking-wider text-gray-900  ">Dog Name</span>
-            </p>
-          </div>
-        </Link>
-      </li>
-    </ul>
+ 
+    <SingleDog dogs={currentDog} />
+        
+</ul>
   </div>
 </section>
 
@@ -87,7 +53,7 @@ const SampleDogs = () => {
 <div className="mt-1 text-center">
         <Link
           to="/products"
-          className="mt-6 inline-flex items-center rounded border border-yellow-600 bg-yellow-600 px-8 py-3 text-white hover:bg-yellow-500 hover:text-gray-900 focus:outline-none focus:ring active:text-pink-500"
+          className="mt-6 inline-flex items-center rounded border border-gray-600 bg-gray-800 px-8 py-3 text-white hover:bg-gray-900 hover:text-gray-200 focus:outline-none focus:ring active:text-indigo-900"
         >
           <span className="text-sm font-medium ">view in Dog Store </span>
   

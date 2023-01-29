@@ -71,9 +71,8 @@ const UserNavigation =({name, email})=> {
     return (
      <>
     
-    <ToastContainer/>
 
-     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-900">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
   <Link to="/" className="flex items-center">
       <img src={logo} className="h-5 mr-3 sm:h-9" alt="Legacy Kennels" />
@@ -87,7 +86,7 @@ const UserNavigation =({name, email})=> {
       <button  type="button"  onClick={()=>{setVisible(!visible)}}  className="flex mr-6 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
        <div className="relative">
     <img className="w-10 h-10 rounded-full" src={logo} alt="" />
-    <span className="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+    <span className=" animate-pulse top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
 </div>
       </button>
 

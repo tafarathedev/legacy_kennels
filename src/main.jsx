@@ -27,13 +27,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
-        <Route path="/products/product_details" element={<ProductDetails/>} />
+        <Route path="/products/product_details/:id" element={<ProductDetails/>} />
         <Route path="/products" element={<Products/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/terms_and_conditions" element={<Terms_Conditions/>} />
         <Route path="/services" element={<Services/>} />
         <Route path="/dogs" element={<Dogs/>} />
-        <Route path="/dogs/dog_details" element={<DogDetails/>} />
+        <Route path="/dogs/dog_details/:id" element={<DogDetails/>} />
         <Route path="/blogs"  element={<Blogs/>}/>
         <Route path="/frequently_asked_questions"  element={<FAQs/>}/>
         <Route path="*"  element={<NotFound />} />
